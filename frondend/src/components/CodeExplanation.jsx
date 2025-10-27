@@ -1,10 +1,12 @@
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import CopyToClip from "./CopyToClip";
 
 const CodeExplanation = ( props ) => {
-    
+
   return (
-    <div className="w-full max-w-4xl mt-6 bg-gray-50 p-6 rounded-2xl shadow-lg">
+    <div className="w-full max-w-4xl mt-6 bg-gray-50 p-6 rounded-2xl shadow-lg relative">
+        <CopyToClip textToCopy={props.explanation} />
         <h2 className="text-xl front-semibold mb-2">Explanation:</h2>
         <Markdown remarkPlugins={[remarkGfm]}>{ props.explanation }</Markdown>
     </div>

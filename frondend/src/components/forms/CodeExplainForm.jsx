@@ -7,7 +7,6 @@ const CodeExplainForm = () => {
     const [inputValue, setInputValue] = useState("");
     
     const [formState, formAction, isPending] = useActionState(explain, null);
-    console.log("input:", inputValue)
   return (
     <div className="w-full max-w-4xl bg-white p-6 rounded-2xl shadow-lg text-black" >
         <form action={formAction}>
